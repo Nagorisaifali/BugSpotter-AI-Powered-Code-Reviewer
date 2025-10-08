@@ -151,7 +151,7 @@ export default function App() {
       <nav className="navbar">
         <div className="brand">
           <span className="logo">⚡</span>
-          <span className="title">BugSpotter</span>
+          <span className="title"><h3>BugSpotter</h3></span>
         </div>
 
         <div>
@@ -201,7 +201,7 @@ export default function App() {
             <div className="pill">{selectedLang.label}</div>
           </div>
 
-          <div className="editor-wrap">
+          {/* <div className="editor-wrap">
             <Editor
               value={code}
               onValueChange={setCode}
@@ -209,7 +209,21 @@ export default function App() {
               padding={14}
               style={editorStyle}
             />
-          </div>
+          </div> */}
+
+
+            <div className="editor-wrap">
+              <Editor
+                value={code}
+                onValueChange={setCode}
+                highlight={(c) => prism.highlight(c, getGrammar(selectedLang.value), selectedLang.value)}
+                padding={14}
+                style={editorStyle}
+              />
+            </div>
+
+
+
         </section>
 
         {/* Divider */}
