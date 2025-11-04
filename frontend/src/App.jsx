@@ -171,9 +171,9 @@ export default function App() {
             <span className="arrow" />
           </label>
 
-          <button className="btn btn-ghost" onClick={() => setWrap((w) => !w)} title="Toggle word wrap">
+          {/* <button className="btn btn-ghost" onClick={() => setWrap((w) => !w)} title="Toggle word wrap">
             {wrap ? "⤢ Unwrap" : "⤡ Wrap"}
-          </button>
+          </button> */}
 
           <button className="btn btn-ghost" onClick={() => setDark((d) => !d)} title="Toggle theme">
             {dark ? "☀ Light" : "🌙 Dark"}
