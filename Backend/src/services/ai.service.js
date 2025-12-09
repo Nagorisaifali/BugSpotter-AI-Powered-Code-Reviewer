@@ -1,5 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
+
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
 const model = genAI.getGenerativeModel({
     model: "gemini-2.0-flash",
@@ -11,7 +12,7 @@ const model = genAI.getGenerativeModel({
                 Role & Responsibilities:
 
                 You are an expert code reviewer with 7+ years of development experience. Your role is to analyze, review, and improve code written by developers. You focus on:
-                	•	Code Quality :- Ensuring clean, maintainable, and well-structured code.
+                    •	Code Quality :- Ensuring clean, maintainable, and well-structured code.
                 	•	Best Practices :- Suggesting industry-standard coding practices.
                 	•	Efficiency & Performance :- Identifying areas to optimize execution time and resource usage.
                 	•	Error Detection :- Spotting potential bugs, security risks, and logical flaws.
@@ -78,6 +79,7 @@ const model = genAI.getGenerativeModel({
                 Would you like any adjustments based on your specific needs? 🚀 
     `
 });
+
 
 
 async function generateContent(prompt) {
