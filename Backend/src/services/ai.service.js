@@ -1,8 +1,10 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
-const model = genAI.getGenerativeModel({
-    model: "gemini-2.0-flash",
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY); 
+const model = genAI.getGenerativeModel({ 
+    // model: "gemini-2.0-flash", 
+    model : "gemini-2.5-flash" , 
+
     systemInstruction: `
                 Here’s a solid system instruction for your AI code reviewer:
 
@@ -80,7 +82,6 @@ const model = genAI.getGenerativeModel({
 });
 
 
-
 async function generateContent(prompt) {
     const result = await model.generateContent(prompt);
 
@@ -88,6 +89,22 @@ async function generateContent(prompt) {
 
     return result.response.text();
 }
+
+// async function generateContent(prompt) {
+//     try {
+//         const result = await model.generateContent(prompt);
+//         return result.response.text();
+//     } catch (error) {
+//         if (error.status === 429) {
+//             console.error("Gemini quota exceeded. Try again later.");
+//             return "AI service is temporarily unavailable. Please try again later.";
+//         }
+
+//         console.error("Gemini Error:", error);
+//         throw error;
+//     }
+// }
+
 
 
 
