@@ -105,13 +105,13 @@ export default function App() {
   async function reviewCode() {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/ai/get-review", {
+      const response = await axios.post("https://bugspotter-ai-powered-code-reviewer.onrender.com/ai/get-review", {
         code,
         language: selectedLang.value,
       });
       setReview(response.data);
     } catch (err) {
-      setReview("⚠️ Error: Could not fetch review. Is the backend running at http://localhost:3000 ?");
+      setReview("⚠️ Error: Could not fetch review. Is the backend running at https://bugspotter-ai-powered-code-reviewer.onrender.com ?");
     } finally {
       setLoading(false);
     }
