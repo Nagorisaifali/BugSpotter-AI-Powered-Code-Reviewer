@@ -9,7 +9,6 @@ import prism from "prismjs";
 import "./App.css";
 
 
-
 // Language select options
 const languages = [
   { value: "javascript", label: "JavaScript", ext: "js" },
