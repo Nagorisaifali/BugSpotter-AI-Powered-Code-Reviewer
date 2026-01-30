@@ -1,5 +1,4 @@
 
-
 import { useState, useEffect, useMemo } from "react";
 import "prismjs/themes/prism-tomorrow.css";
 import Editor from "react-simple-code-editor";
@@ -7,7 +6,6 @@ import axios from "axios";
 import Markdown from "react-markdown";
 import prism from "prismjs";
 import "./App.css";
-
 
 // Language select options
 const languages = [
@@ -221,8 +219,6 @@ export default function App() {
               />
             </div>
 
-
-
         </section>
 
         {/* Divider */}
@@ -266,4 +262,5 @@ export default function App() {
     </div>
   );
 }
+
 
